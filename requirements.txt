@@ -3,5 +3,8 @@ Jinja2==2.7.3
 MarkupSafe==0.23
 Werkzeug==0.10.1
 gunicorn==19.2.1
+iso8601==0.1.10
 itsdangerous==0.24
+requests==2.5.1
+-e git://github.com/kr4ng/restmarketo.git@3b57e0a60bbcc82b2f5ba7933ab69fd74b310f7b#egg=restmarketo-master
 wsgiref==0.1.2
