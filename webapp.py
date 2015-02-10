@@ -28,6 +28,7 @@ def hello():
 class Merge(restful.Resource):
     def post(self):
         json_input = request.get_json(force=True)
+        #for local testing only
         #email = json_input['email']
         email = str(json_input)
         client = Client('973-AGY-801','f0f62b61-9545-4c43-b1f5-c2c16a50361f','YQ2hi3qPYiwzfeUrJRa9LUQss9lx3VMU')
@@ -55,7 +56,3 @@ api.add_resource(Merge, '/merge')
 if __name__ == '__main__':
     app.run(debug=True)
     print 'app loaded'
-    '''
-    client=Client('161-TPY-810', 'dc499150-316a-4a49-9700-19f9e2e130b3', 'r656aoxoK6WW6U1ev60KA5c6s3PemnZK')
-    client.createUpdateLeads([{'email':'testy@testerson.org', 'firstName':'testy','lastName':'testerson'}])
-    '''
