@@ -15,7 +15,9 @@ def hello():
     return 'Hello World!'
 
 class Merge(restful.Resource):
-    def get(self):
+    def post(self):
+        json_input = request.get_json(force=True)
+        print json_input
         return {'hello': 'world'}
 
 api.add_resource(Merge, '/merge')
