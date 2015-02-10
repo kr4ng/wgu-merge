@@ -1,5 +1,5 @@
 import os
-from flask import Flask
+from flask import Flask, request
 from flask.ext import restful
 
 import httplib
@@ -24,7 +24,8 @@ api.add_resource(Merge, '/merge')
 
 if __name__ == '__main__':
     app.run(debug=True)
-
+    print 'app loaded'
+    '''
     httplib.HTTPConnection.debuglevel = 1
     logging.basicConfig()
     logging.getLogger().setLevel(logging.DEBUG)
@@ -36,3 +37,4 @@ if __name__ == '__main__':
     client=Client('161-TPY-810', 'dc499150-316a-4a49-9700-19f9e2e130b3', 'r656aoxoK6WW6U1ev60KA5c6s3PemnZK')
     
     client.createUpdateLeads([{'email':'testy@testerson.org', 'firstName':'testy','lastName':'testerson'}])
+    '''
