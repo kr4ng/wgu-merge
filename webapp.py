@@ -33,12 +33,9 @@ class Merge(restful.Resource):
         client = Client('973-AGY-801','f0f62b61-9545-4c43-b1f5-c2c16a50361f','YQ2hi3qPYiwzfeUrJRa9LUQss9lx3VMU')
         leads = client.getMultipleLeadsByFilterType('email', [email], fields=['email','firstName'])
         # find the lead that should be the winner
-        try:
-            winningLeadId = leads[1]['id']
-            losingLeadId = leads[0]['id']
-            client.mergeLeads(winningLeadId, losingLeadId)
-        except:
-            pass
+        winningLeadId = leads[1]['id']
+        losingLeadId = leads[0]['id']
+        client.mergeLeads(winningLeadId, losingLeadId)
         return leads
 
 '''
