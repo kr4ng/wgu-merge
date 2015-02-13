@@ -31,7 +31,7 @@ class Merge(restful.Resource):
         #for local testing only
         #email = json_input['email']
         email = str(json_input)
-        client = Client('973-AGY-801','f0f62b61-9545-4c43-b1f5-c2c16a50361f','YQ2hi3qPYiwzfeUrJRa9LUQss9lx3VMU')
+        client = Client('123-3GY-831','f0ff32b61-9545-4c43-b1f5-c2c1623f361f','YQ2hi3qs4dfrJRdf439LUQss9lx3VMU')
         leads = client.getMultipleLeadsByFilterType('email', [email], fields=['email','firstName'])
         # find the lead that should be the winner
         winningLeadId = str(leads[1]['id'])
